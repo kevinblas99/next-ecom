@@ -1,6 +1,6 @@
 "use client";
 
-import { Session } from "next-auth"
+import { Session } from "next-auth";
 import Image from "next/image";
 import profilePicPlaceholder from "@/assets/profile-pic-placeholder.png";
 import { signIn, signOut } from "next-auth/react";
@@ -13,7 +13,7 @@ export default function UserMenuButton({session}: UserMenuButtonProps) {
     const user = session?.user;
 
     return (
-        <div>
+        <div className="dropdown-end dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
                 { user ? (
             <Image
@@ -42,15 +42,15 @@ export default function UserMenuButton({session}: UserMenuButtonProps) {
             }
             </label>
             <ul
-            tabIndex={0}
-            className="dropdown-content menu rounded-box menu-sm z-30 mt-3 w-52 bg-base-100 p-2 shadow"
-            >
+        tabIndex={0}
+        className="dropdown-content menu rounded-box menu-sm z-30 mt-3 w-52 bg-base-100 p-2 shadow"
+      >
                 <li>
-                    {user ?
-                    <button onClick={() => signOut({callbackUrl: "/"})}>Sign Out</button>
+                    {user ? (
+                    <button onClick={() => signOut({callbackUrl: "/"})}>Sign Out</button> )
                     :
-                    <button onClick={() => signIn()}>Sign in</button>    
-                }
+                    (<button onClick={() => signIn()}>Sign in</button>    
+                )}
                 </li>
             </ul>
         </div>
