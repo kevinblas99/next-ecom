@@ -8,8 +8,8 @@ import SessionProvider from "./SessionProvider"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Flowmazon',
-  description: 'We love your wallet not you.',
+  title: 'Kevmazon',
+  description: 'We love your wallet, not you.',
 }
 
 export default function RootLayout({
