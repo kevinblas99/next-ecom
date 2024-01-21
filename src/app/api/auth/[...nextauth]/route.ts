@@ -8,7 +8,7 @@ import { env } from "@/lib/env";
 import { mergeAnnonymousCartIntoUserCart } from "@/lib/db/cart";
 import { PrismaClient } from "@prisma/client";
 
-const authOptions: NextAuthOptions = {
+export const authOptions: NextAuthOptions = {
     adapter: PrismaAdapter(prisma as PrismaClient) as Adapter,
     providers: [
         Google({
@@ -28,8 +28,6 @@ const authOptions: NextAuthOptions = {
         },
     }
 }
-
-export default authOptions;
 
 const handler = NextAuth(authOptions);
 
