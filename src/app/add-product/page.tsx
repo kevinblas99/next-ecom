@@ -2,7 +2,7 @@ import SubmitButton from "@/components/SubmitButton";
 import { prisma } from "@/lib/db/prisma";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import  authOptions  from "../api/auth/[...nextauth]/authOptions";
+import { authOptions }  from "../api/auth/[...nextauth]/authOptions";
 
 export const metadata = {
     title: "Add Product - Kevmazon"
