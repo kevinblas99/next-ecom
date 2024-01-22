@@ -8,7 +8,7 @@ import { Adapter } from "next-auth/adapters";
 import NextAuth from "next-auth/next";
 import Google from "next-auth/providers/google";
 
-export const authOptions: NextAuthOptions = {
+    const authOptions: NextAuthOptions = {
     adapter: PrismaAdapter(prisma as PrismaClient) as Adapter,
     providers: [
         Google({
@@ -19,7 +19,7 @@ export const authOptions: NextAuthOptions = {
     callbacks: {
         session({session, user}) {
             session.user.id = user.id
-        return session;            
+        return session;
         },
     },
     events : {
@@ -31,4 +31,4 @@ export const authOptions: NextAuthOptions = {
 
 const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST };
+export { handler as GET, handler as POST, authOptions };
