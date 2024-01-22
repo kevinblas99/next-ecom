@@ -14,7 +14,7 @@ import GoogleProvider from "next-auth/providers/google";
         GoogleProvider({
             clientId: env.GOOGLE_CLIENT_ID,
             clientSecret: env.GOOGLE_CLIENT_SECRET,
-        })
+        }),
     ],
     callbacks: {
         session({session, user}) {
