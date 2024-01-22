@@ -30,5 +30,5 @@ import Google from "next-auth/providers/google";
 }
 const handler = NextAuth(authOptions);
 
-export { authOptions, handler as default };
+export { authOptions };
 export { handler as GET, handler as POST };
