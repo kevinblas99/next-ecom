@@ -31,4 +31,4 @@ import GoogleProvider from "next-auth/providers/google";
 
 const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST, authOptions };
+export { handler as GET, handler as POST, authOptions as default };
