@@ -6,7 +6,6 @@ const envSchema = zod.object({
     GOOGLE_CLIENT_SECRET:zod.string().min(1),
     NEXTAUTH_URL:zod.string().min(1),
     NEXTAUTH_SECRET:zod.string().min(1),
-    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:zod.string().min(1),
 });
 
 
