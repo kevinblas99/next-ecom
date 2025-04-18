@@ -20,14 +20,14 @@ export default async function Home({searchParams: {page = "1"} } : HomeProps) {
   const totalPages = Math.ceil((totalItemCount - heroItemCount) / pageSize)
 
   const products = await prisma.product.findMany({
-    orderBy: {id: "desc"},
+    orderBy: {id: "asc"},
     skip: (currentPage - 1) * pageSize +(currentPage === 1 ? 0 : heroItemCount),
     take: pageSize + (currentPage === 1 ? heroItemCount : 0),
   })
 
   return (
     <div className='flex flex-col items-center'>
-      {currentPage === 1 && 
+      {currentPage === 1 &&
       <div className='hero rounded-xl bg-base-100'>
         <div className='hero-content flex-col lg:flex-row'>
         <Image

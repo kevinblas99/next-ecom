@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -35,7 +35,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/api/auth/[...nextauth]/route.ts"
-  ],
+, "src/app/api/checkout_sessions/route.ts", ],
   "exclude": [
     "node_modules"
   ]
