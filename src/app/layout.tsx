@@ -8,6 +8,7 @@ import  SessionProvider from './SessionProvider';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://next-ecom-phi-umber.vercel.app/'),
   title: 'Kevmazon',
   description: 'We love your wallet, not you.',
 }
